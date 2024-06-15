@@ -1,0 +1,17 @@
+<div>
+  <h1>Sign Up</h1>
+  <%= _f = form_for :user, "#", [phx_submit: :save], fn f -> %>
+    <div>
+      <%= label f, :email %>
+      <%= text_input f, :email %>
+    </div>
+    <div>
+      <%= label f, :password %>
+      <%= password_input f, :password %>
+    </div>
+    <div>
+      <%= submit "Sign Up" %>
+    </div>
+  <% end %>
+  <p><%= @error %></p>
+</div>
